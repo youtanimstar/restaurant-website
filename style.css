@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Sora", sans-serif;
+}
+:root {
+  --background-color-primary: #e0edc1;
+  --baclground-color-secondary: #6888b1;
+  --helper-background-color: #ffffff;
+  --text-color: #f6f8fa;
+}
+
+button {
+  padding: 1.2rem 3.2rem;
+  background-color: var(--baclground-color-secondary);
+  border-radius: 50px;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  border: 2px solid var(--baclground-color-secondary);
+  transition: 0.1s linear;
+  color: var(--text-color);
+  cursor: pointer;
+}
+button:hover,
+button:active {
+  background-color: var(--text-color);
+  color: var(--baclground-color-secondary);
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--background-color-primary);
+}
+/* ----------------------global declaration----------------------- */
+/* -- ------------------------page one start--------------------------------- */
+.page-one {
+  height: 75vh;
+  width: 100%;
+  background-color: var(--baclground-color-secondary);
+  padding: 5rem;
+  z-index: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+#icons {
+  display: none;
+}
+.close {
+  display: none;
+}
+
+.nav-bar {
+  height: 5rem;
+  width: 70rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+li a {
+  padding: 1.2rem 3.2rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--helper-background-color);
+  transition: all 0.1s linear;
+  border-radius: 50px;
+}
+
+li a:hover,
+li a:active {
+  background-color: var(--text-color);
+  color: var(--baclground-color-secondary);
+  border-radius: 50px;
+}
+
+.heading {
+  height: calc(90vh - 10rem);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading h1 {
+  font-size: 10rem;
+  color: var(--text-color);
+}
+.heading p {
+  font-size: 3rem;
+  padding: 1rem;
+  color: var(--helper-background-color);
+  font-weight: 100;
+}
+/* -- ------------------------page one responsive--------------------------------- */
+@media (max-width: 1200px) {
+  .close {
+    display: block;
+    z-index: 1;
+    color: var(--baclground-color-secondary);
+    font-size: 3rem;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    transition: all 0.5s;
+  }
+  .nav-bar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--text-color);
+    top: 0rem;
+    left: -100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  li a {
+    color: var(--baclground-color-secondary);
+  }
+  li a:hover,
+  li a:active {
+    background-color: var(--baclground-color-secondary);
+    color: var(--text-color);
+    border-radius: 50px;
+  }
+  #icons {
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--text-color);
+  }
+  .heading h1 {
+    font-size: 5rem;
+  }
+  .heading p {
+    font-size: 2rem;
+  }
+  .logo {
+    width: 25%;
+    height: 25%;
+  }
+}
+@media (max-width: 674px) {
+  .heading h1 {
+    font-size: 2rem;
+  }
+  .heading p {
+    font-size: 1rem;
+  }
+  .logo {
+    width: 10rem;
+    height: 2rem;
+  }
+  #icons {
+    font-size: 2rem;
+  }
+}
+
+/* -- ------------------------page one END--------------------------------- */
+.link-image {
+  background-image: url("./images/design-background.png");
+  height: 100vh;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+  position: relative;
+  top: -25rem;
+  z-index: -1;
+}
+/* -- ------------------------page two start--------------------------------- */
+.page-two {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  top: -23rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.page-two h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--baclground-color-secondary);
+}
+.card-area {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  height: 100%;
+  width: 40rem;
+  background-color: var(--text-color);
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  color: rgb(48, 48, 48);
+  transition: all 0.5s linear;
+}
+.card:hover {
+  box-shadow: 0 0 50px rgb(0, 8, 46);
+}
+.card h2 {
+  font-size: 2rem;
+  padding: 3rem;
+}
+.card p {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.card h3 {
+  font-size: 2rem;
+  text-align: left;
+  margin-top: 20px;
+}
+.imgone {
+  height: 50%;
+  width: 100%;
+  background-image: url("./images/card-one.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.imgtwo {
+  height: 50%;
+  width: 100%;
+  background-image: url("./images/card-two.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.imgthree {
+  height: 50%;
+  width: 100%;
+  background-image: url("./images/card-three.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* -- ------------------------page two END--------------------------------- */
